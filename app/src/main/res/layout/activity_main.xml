@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="lechner.huehnerapp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/TextStatus"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/buttonExit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/buttonInfo"
+        android:layout_alignStart="@+id/buttonInfo" />
+
+    <Button
+        android:text="setAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAuto"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/TextStatus"
+        android:layout_alignLeft="@+id/buttonOeffnen"
+        android:layout_alignStart="@+id/buttonOeffnen" />
+
+    <Button
+        android:text="Schliessen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSchliessen"
+        android:layout_alignBaseline="@+id/buttonOeffnen"
+        android:layout_alignBottom="@+id/buttonOeffnen"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="54dp"
+        android:layout_marginEnd="54dp" />
+
+    <Button
+        android:text="Oeffnen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:id="@+id/buttonOeffnen"
+        android:layout_below="@+id/buttonAuto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:text="Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonInfo"
+        android:elevation="0dp"
+        android:layout_alignTop="@+id/buttonAuto"
+        android:layout_alignRight="@+id/buttonSchliessen"
+        android:layout_alignEnd="@+id/buttonSchliessen" />
+</RelativeLayout>
