@@ -18,8 +18,8 @@ import java.io.ObjectOutputStream;
 import android.os.StrictMode;
 
 public class MainActivity extends AppCompatActivity {
-    //String ip = "192.168.2.108";
-    String ip = "richardlechner.spdns.de";
+    String ip = "192.168.2.108";
+   // String ip = "richardlechner.spdns.de";
     Socket socket = null;
     ObjectOutputStream oos;
     ObjectInputStream ois;
