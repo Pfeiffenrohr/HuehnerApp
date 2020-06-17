@@ -1,6 +1,6 @@
 package lechner.huehnerapp;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -17,15 +17,17 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import android.os.StrictMode;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
-    String ip = "192.168.2.108";
-   // String ip = "richardlechner.spdns.de";
+    //String ip = "192.168.2.108";
+    String ip = "richardlechner.spdns.de";
     Socket socket = null;
     ObjectOutputStream oos;
     ObjectInputStream ois;
     TextView statuszeile;
 
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         Button oeffnen;
         Button schliessen;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         statuszeile = (TextView) findViewById(R.id.TextStatus);
         try {
             Log.d("Huehner", "Try to connect to server ...");
+            statuszeile.setText("Try to connect ...");
             socket = new Socket(ip, 8976);
             statuszeile.setText("Connectet!");
             oos = new ObjectOutputStream(socket.getOutputStream());
